@@ -132,10 +132,10 @@ class SpanningTree
             {
                 if ( hidden2.empty() )
                     // ================== Problem 1 of the assignment
-                    printf("# of deletion paths = %d, for hidden message: %s\n", _dimen.deletionPaths.size(), hidden.c_str() );
+                    printf("# of deletion paths = %d, for hidden message: %s\n", (int) _dimen.deletionPaths.size(), hidden.c_str() );
                 else
                 {
-                    printf("# of deletion paths = %d after first hidden message: %s\n", _dimen.deletionPaths.size(), hidden.c_str() );
+                    printf("# of deletion paths = %d after first hidden message: %s\n", (int) _dimen.deletionPaths.size(), hidden.c_str() );
                     // ================== Problem 2 of the assignment
                     auto deletionPathsFirstPass = _dimen.deletionPaths;
                     _dimen.reset();
@@ -148,7 +148,7 @@ class SpanningTree
                         walk( newMessage, hidden2 );
                     }
 
-                    printf("# of deletion paths = %d, for hidden messages: %s and %s\n", _dimen.deletionPaths.size(), hidden.c_str(), hidden2.c_str() );
+                    printf("# of deletion paths = %d, for hidden messages: %s and %s\n", (int) _dimen.deletionPaths.size(), hidden.c_str(), hidden2.c_str() );
                 }
             }
         }
